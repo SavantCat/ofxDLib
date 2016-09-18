@@ -106,7 +106,9 @@ namespace dlib
              */
             jpeg_destroy_decompress(&cinfo);
             fclose(fp);
-            throw image_load_error(std::string("jpeg_loader: error while reading ") + filename);
+            return -1;
+            
+            //throw image_load_error(std::string("jpeg_loader: error while reading ") + filename);
         }
 
 
